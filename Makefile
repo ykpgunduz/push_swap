@@ -6,7 +6,7 @@
 #    By: yagunduz <yagunduz@student.42istanbul.com.tr> +#+  +:+       +#+      #
 #                                                    +#+#+#+#+#+   +#+         #
 #    Created: 2025/12/02 22:51:47 by yagunduz             #+#    #+#           #
-#    Updated: 2026/01/21 17:22:33 by yagunduz            ###   ########.tr     #
+#    Updated: 2026/01/21 21:43:56 by yagunduz            ###   ########.tr     #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,5 +64,3 @@ fclean: clean
 	make fclean -C $(LIBFT_DIR)
 
 re: fclean all
-
-.PHONY: all clean fclean re
