@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                           :::      ::::::: */
+/*   mini_sort.c                                           :+:      :+:    :+ */
+/*                                                       +:+ +:+         +:+  */
+/*   By: yagunduz <yagunduz@student.42istanbul.com.tr> +#+  +:+       +#+     */
+/*                                                   +#+#+#+#+#+   +#+        */
+/*   Created: 2025/12/02 22:54:33 by yagunduz             #+#    #+#          */
+/*   Updated: 2026/01/21 17:21:32 by yagunduz            ###   ########.tr    */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	move_min_to_top(t_stack_list *stack_a, int min_location)
