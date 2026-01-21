@@ -64,7 +64,7 @@ make re      # Yeniden derler
 ## Kaynaklar
 
 ### Dokümantasyon
-- [push_swap Proje Konusu (42 İntra)](https://cdn.intra.42.fr/pdf/pdf/960/push_swap.en.pdf)
+- [push_swap Proje Konusu (42 İntra)](https://cdn.intra.42.fr/pdf/pdf/192991/en.subject.pdf)
 - [Radix Sort Algoritması](https://en.wikipedia.org/wiki/Radix_sort)
 - [Stack Veri Yapısı](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 - [Algorithm Visualizer - Push Swap](https://push-swap-visualizer.vercel.app/)
