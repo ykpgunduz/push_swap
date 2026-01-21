@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../push_swap.h"
 
 static int	handle_single_arg(char *input, t_stack_list *stack_a)
 {
