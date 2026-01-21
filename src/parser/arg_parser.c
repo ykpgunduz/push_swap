@@ -12,37 +12,48 @@
 
 #include "../../push_swap.h"
 
+static long	ft_atol(const char *str)
+{
+	long	num;
+	int		sign;
+	int		i;
+
+	num = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (ft_isdigit(str[i]))
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
+}
+
 static int	handle_single_arg(char *input, t_stack_list *stack_a)
 {
 	long	val;
 
 	if (!verify_num_format(input))
 		return (0);
-	val = ft_atoi(input);
+	val = ft_atol(input);
 	if (val > INT_MAX || val < INT_MIN)
 		return (0);
 	node_insert_back(stack_a, (int)val);
 	return (1);
 }
 
-static int	handle_arg_array(char **inputs, t_stack_list *stack_a)
-{
-	int	idx;
-
-	idx = 0;
-	while (inputs[idx])
-	{
-		if (!handle_single_arg(inputs[idx], stack_a))
-			return (0);
-		idx++;
-	}
-	return (1);
-}
-
 static int	process_string_arg(char *str, t_stack_list *stack_a)
 {
 	char	**split_input;
-	int		result;
+	int		i;
 
 	split_input = ft_split(str, ' ');
 	if (!split_input || !split_input[0])
@@ -51,9 +62,18 @@ static int	process_string_arg(char *str, t_stack_list *stack_a)
 			free_str_array(split_input);
 		return (0);
 	}
-	result = handle_arg_array(split_input, stack_a);
+	i = 0;
+	while (split_input[i])
+	{
+		if (!handle_single_arg(split_input[i], stack_a))
+		{
+			free_str_array(split_input);
+			return (0);
+		}
+		i++;
+	}
 	free_str_array(split_input);
-	return (result);
+	return (1);
 }
 
 static int	process_multi_args(int argc, char **argv, t_stack_list *stack_a)
