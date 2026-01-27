@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by ykpgunduz.*
+*This project has been created as part of the 42 curriculum by yagunduz.*
 
 # push_swap
 
